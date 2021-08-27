@@ -1,4 +1,3 @@
-import { nanoid } from '@reduxjs/toolkit';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../../redux/Slices/bookSlice';
@@ -16,7 +15,6 @@ const AddBook = () => {
       title,
       author,
       rating,
-      id: nanoid()
     }));
     // for clear inputs after adding book
     setTitle('');
