@@ -13,11 +13,25 @@ body {
 .header {
   background-color: #283593;
   padding: 12px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .header h1 {
   color: white;
   text-align: center;
+}
+.logout{
+  padding: 10px;
+  font-size: 17px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.logout:hover{
+  background-color: rgba(0, 0, 0, 0.26);
 }
 
 .add-book {
