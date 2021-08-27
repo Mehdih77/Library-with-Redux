@@ -1,12 +1,27 @@
+import { nanoid } from '@reduxjs/toolkit';
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../../redux/Slices/bookSlice';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [rating, setRating] = useState('5');
 
-  const addBookHandler = () => {
-    //   will handle book submit here
+  const dispatch = useDispatch();
+
+  const addBookHandler = (e) => {
+    e.preventDefault();
+    dispatch(addBook({
+      title,
+      author,
+      rating,
+      id: nanoid()
+    }));
+    // for clear inputs after adding book
+    setTitle('');
+    setAuthor('');
+    setRating('5');
   };
 
   return (
